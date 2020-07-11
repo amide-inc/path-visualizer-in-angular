@@ -1,0 +1,7 @@
+<div class="container">
+    <div  *ngFor="let ar of array; index as i" (mouseover)="updateClass(i)" [ngClass]=setClass(i)>
+        {{i}}
+    </div>
+</div>
+
+
