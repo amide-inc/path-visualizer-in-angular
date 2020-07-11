@@ -1,7 +1,21 @@
 <div class="container">
-    <div  *ngFor="let ar of array; index as i" (mouseover)="updateClass(i)" [ngClass]=setClass(i)>
-        {{i}}
-    </div>
+    <h1 class="text-danger text-center">Path Visulizer </h1>
+    <p class="text-center">
+        <button class="btn btn-outline-danger m-1" (click)="setBoxPath()">Start</button>
+        <button class="btn btn-outline-danger m-1" (click)="plotStart()">Plot</button>
+    </p>
+  <div class="row">
+      
+  </div>
+   <div class="row justify-content-center">
+       <div class="big-box">
+            <div  *ngFor="let ar of array; index as i" (mouseover)="updateClass(i)" [ngClass]=setClass(i)>
+                {{i}}
+            </div>
+       </div>
+   </div>
+
 </div>
+
 
 

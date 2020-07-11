@@ -8,15 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class PracticeComponent implements OnInit {
 
   constructor() { }
-  totalWidth =  600;
-  boxWidth: 30;
+ 
   array = new Array(20*20).fill(0)
+  plotMode:boolean = false;
 
   ngOnInit(): void {
-    this.setBoxPath()
+   
    }
    updateClass(i) {
-     this.array[i] = 1
+     if(this.plotMode)
+        this.array[i] = 1;
+   }
+   plotStart(){
+     this.plotMode = true;
    }
    setClass(i) {
      if(this.array[i] == 0) {
@@ -28,6 +32,7 @@ export class PracticeComponent implements OnInit {
    }
 
    setBoxPath() {
+     this.plotMode = false
      var count = 0;
      var m =0;
      for(var i=0;i<20; i++) {
