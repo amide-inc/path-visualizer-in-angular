@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <div class="wrapper-row" *ngFor="let row of rows; index as r">
+      <div class="wrapper-box" *ngFor="let col of cols; index as c" [ngClass]="getColors(r,c)" (click)="makeWall(r, c)" >
+
+      </div>
+  </div>
+</div>
